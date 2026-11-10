@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Mobile Container -->
+    <div id="phoneFrame">
+
+        <!-- 1. LOCK SCREEN LAYER -->
+        <div id="lockScreen" class="screen active">
+            <div id="clock">12:00</div>
+            <div id="date">Monday, November 9</div>
+            <div class="swipe-hint">Swipe or tap to unlock</div>
+        </div>
+
+        <!-- 2. HOME SCREEN LAYER -->
+        <div id="homeScreen" class="screen">
+            <div class="app-grid">
+                <div class="app-icon" onclick="openApp('spotifyApp')">
+                    <div class="icon-box spotify-icon">🎵</div>
+                    <span>Spotify</span>
+                </div>
+                <div class="app-icon" onclick="openApp('notesApp')">
+                    <div class="icon-box notes-icon">📝</div>
+                    <span>Notes</span>
+                </div>
+                <div class="app-icon" onclick="openApp('photosApp')">
+                    <div class="icon-box photos-icon">🖼️</div>
+                    <span>Photos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. SPOTIFY APP LAYER -->
+        <div id="spotifyApp" class="screen app-view">
+            <div class="app-header">
+                <button onclick="closeApp()">‹ Home</button>
+                <span>Spotify</span>
+            </div>
+            <div class="app-content">
+                <div class="playlist-card">
+                    <img src="./IMG_1888.jpeg" alt="Cover" class="cover-art">
+                    <h2>me+him</h2>
+                    <p>I love rui</p>
+                    <small>By kuansumu</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
